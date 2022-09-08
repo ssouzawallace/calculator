@@ -20,7 +20,6 @@ struct ContentView: View {
                 Toggle("Programmer", isOn: $isProgrammer)
                 Spacer()
                 Display(calculator: $calculator)
-                    .scaledToFit()
                 HStack {
                     if isProgrammer && UIDevice.current.orientation.isLandscape {
                         ProgrammerKeyboard(calculator: $calculator)
@@ -28,8 +27,9 @@ struct ContentView: View {
                     if isScientific && UIDevice.current.orientation.isLandscape {
                         ScientificKeyboard(calculator: $calculator)
                     }
-                    Keyboard(calculator: $calculator)
-                        .scaledToFill()
+                    if !isProgrammer {
+                        Keyboard(calculator: $calculator)
+                    }
                 }
             }
             .background(.thinMaterial)
