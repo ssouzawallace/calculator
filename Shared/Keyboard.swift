@@ -8,78 +8,158 @@
 import SwiftUI
 
 struct Keyboard: View {
-    let calculator = Calculator()
+    @Binding var calculator: RPNCalculator
+    
     var body: some View {
         VStack {
             HStack {
                 Button {
                     calculator.buttonPressed()
                 } label: {
-                    Text("7")
+                    Text("x↔y")
                 }
                 Button {
                     calculator.buttonPressed()
                 } label: {
-                    Text("8")
+                    Text("R↓")
                 }
                 Button {
                     calculator.buttonPressed()
                 } label: {
-                    Text("9")
+                    Text("R↑")
                 }
+                Button {
+                    calculator.buttonPressed()
+                } label: {
+                    Image(systemName: "delete.backward")
+                        .accessibilityHint("Delete the current row.")
+                }
+                
             }
             
             HStack {
                 Button {
                     calculator.buttonPressed()
                 } label: {
-                    Text("4")
+                    Text("C")
                 }
                 Button {
                     calculator.buttonPressed()
                 } label: {
-                    Text("5")
+                    Text("±")
                 }
                 Button {
                     calculator.buttonPressed()
                 } label: {
-                    Text("6")
+                    Text("%")
+                }
+                Button {
+                    calculator.divisionPressed()
+                } label: {
+                    Text("÷")
                 }
             }
             
             HStack {
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("1")
+                VStack {
+                    HStack {
+                        Button {
+                            calculator.digitPressed(7)
+                        } label: {
+                            Text("7")
+                        }
+                        Button {
+                            calculator.digitPressed(8)
+                        } label: {
+                            Text("8")
+                        }
+                        Button {
+                            calculator.digitPressed(9)
+                        } label: {
+                            Text("9")
+                        }
+                    }
+                    
+                    HStack {
+                        Button {
+                            calculator.digitPressed(4)
+                        } label: {
+                            Text("4")
+                        }
+                        Button {
+                            calculator.digitPressed(5)
+                        } label: {
+                            Text("5")
+                        }
+                        Button {
+                            calculator.digitPressed(6)
+                        } label: {
+                            Text("6")
+                        }
+                    }
+                    
+                    HStack {
+                        Button {
+                            calculator.digitPressed(1)
+                        } label: {
+                            Text("1")
+                        }
+                        Button {
+                            calculator.digitPressed(2)
+                        } label: {
+                            Text("2")
+                        }
+                        Button {
+                            calculator.digitPressed(3)
+                        } label: {
+                            Text("3")
+                        }
+                    }
+                    
+                    HStack {
+                        Button {
+                            calculator.digitPressed(0)
+                        } label: {
+                            Text("0")
+                        }
+                        Button {
+                            calculator.commaPressed()
+                        } label: {
+                            Text(".")
+                        }
+                    }
                 }
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("2")
+                VStack {
+                    Button {
+                        calculator.multiplicationPressed()
+                    } label: {
+                        Text("×")
+                    }
+                    Button {
+                        calculator.minusPressed()
+                    } label: {
+                        Text("−")
+                    }
+                    Button {
+                        calculator.plusPressed()
+                    } label: {
+                        Text("+")
+                    }
+                    Button {
+                        calculator.returnPressed()
+                    } label: {
+                        Text("⏎")
+                    }
                 }
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("3")
-                }
-            }
-            
-            HStack {
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("0")
-                }
-
             }
         }
+        .buttonBorderShape(.capsule)
         .buttonStyle(.bordered)
     }
 }
 
 struct Keyboard_Previews: PreviewProvider {
     static var previews: some View {
-        Keyboard()
+        Keyboard(calculator: Binding.constant(RPNCalculator()))
     }
 }

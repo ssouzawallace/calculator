@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isScientific = true
+    @State private var calculator = RPNCalculator()
+    
     var body: some View {
         VStack {
-            Display()
-            Keyboard()
+            Toggle("Scientific", isOn: $isScientific)
+            Spacer()
+            Display(calculator: $calculator)
+                .scaledToFit()
+            HStack {
+                if isScientific {
+                    ScientificKeyboard(calculator: $calculator)
+                }
+                Keyboard(calculator: $calculator)
+                    .scaledToFill()
+            }
         }
+        .background(.thinMaterial)
     }
 }
 

@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct Display: View {
+    @Binding var calculator: RPNCalculator
+    
     var body: some View {
         ScrollView {
-            ForEach(0..<11) { element in
-                VStack {
+            ForEach(calculator.stack) { element in
+                VStack(alignment: .trailing) {
                     HStack {
-                        Spacer()
-                        Text("\(Double(element))")
+                        Text("\(Double(element.value))")
                     }
                     Divider()
                 }
             }
-            .padding()
         }
     }
 }
 
 struct Display_Previews: PreviewProvider {
     static var previews: some View {
-        Display()
+        Display(calculator: Binding.constant(RPNCalculator()))
     }
 }
