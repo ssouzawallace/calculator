@@ -87,6 +87,8 @@ struct RPNCalculator: Calculator {
     mutating func moduloPressed() {
         guard let elementA = stack.popLast() else { return }
         guard let elementB = stack.popLast() else { return }
+    
+        stack.append(Item(value: Double(Int(elementA.value) % Int(elementB.value))))
     }
     
     mutating func plusPressed() {

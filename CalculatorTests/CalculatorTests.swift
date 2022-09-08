@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Calculator
 
 class CalculatorTests: XCTestCase {
 
@@ -31,5 +32,60 @@ class CalculatorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testCalculator() throws {
+        
+    }
+    
+    func testMemoryRoutines() throws {
+        
+    }
+    
+    func testDigits() throws {
+        
+    }
+    
+    func testSqrt() throws {
+        
+    }
+    
+    func testButtonPressed() throws {
+        let sut = RPNCalculator()
+        
+        sut.buttonPressed()
+    
+        
+    }
+    
+    func testSqrt3Pressed() throws {
+        
+    }
+    
+    func testSinPressed() throws {
+        
+    }
+    
+    func testSinhPressed() throws {
+        
+    }
 
+    func testModuloPressed() throws {
+        
+    }
+    
+    func testCosPressed() throws {
+        
+    }
+    
+    func testCoshPressed() throws {
+        
+    }
+    
+    func testTanPressed() throws {
+        
+    }
+    
+    func testTanhPressed() throws {
+        
+    }
 }
