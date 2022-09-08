@@ -116,7 +116,7 @@ struct NumericProgrammerKeyboard: View {
             }
         }
         .fixedSize(horizontal: true, vertical: true)
-        .buttonBorderShape(.capsule)
+        .buttonBorderShape(.roundedRectangle)
         .buttonStyle(.bordered)
     }
 }

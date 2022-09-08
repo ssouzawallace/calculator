@@ -11,6 +11,35 @@ struct ContentView: View {
     @State private var mode: RPNCalculator.Mode = .basic
     @State private var calculator = RPNCalculator()
     
+    func copy() {
+        
+    }
+    
+    func export() {
+        
+    }
+    
+    
+    func clear() {
+        
+    }
+    
+    func switchStyle(_ id: Int) {
+        
+    }
+    
+    func switchStyle1() {
+        switchStyle(1)
+    }
+    
+    func switchStyle2() {
+        switchStyle(2)
+    }
+    
+    func switchStyle3() {
+        switchStyle(3)
+    }
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
@@ -34,10 +63,20 @@ struct ContentView: View {
             }
             .background(.thinMaterial)
         }
-        .navigationViewStyle(.stack)
         .navigationTitle("Senolop")
         .toolbar {
-            EditButton()
+            Menu {
+                Button("Copy", action: copy)
+                Button("Export", action: export)
+                Button("Clear", action: clear)
+                Menu("Switch Style") {
+                        Button("Style 1", action: switchStyle1)
+                        Button("Style 2", action: switchStyle2)
+                        Button("Style 3", action: switchStyle3)
+                    }
+            } label: {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
         }
     }
 }
