@@ -6,6 +6,14 @@
 //
 
 import Foundation
+import AVFoundation
+
+extension Int {
+    func fact() -> Int {
+        if self == 0 { return 1 }
+        return self*(self-1).fact()
+    }
+}
 
 protocol Calculator {
     func buttonPressed()
@@ -40,11 +48,23 @@ struct RPNCalculator: Calculator {
             return
         }
         let value: Double = stack.popLast()?.value ?? 0
-        stack.append(Item(value: value*10 + Double(digit)))
+        stack.append(Item(value: value*10 + (addsComma ? Double("0"+String(digit))! : Double(digit))))
     }
     
     mutating func commaPressed() {
+        if containsComma {
+            let player = AVPlayer()
+            
+            player.play()
+        } else {
+            addsComma = true
+        }
+    }
+
+    private var addsComma = false
         
+    private var containsComma: Bool {
+        stack[0].value - Double(Int(stack[0].value)) != 0.0
     }
     
     mutating func returnPressed() {
@@ -65,7 +85,8 @@ struct RPNCalculator: Calculator {
     }
 
     mutating func moduloPressed() {
-        
+        guard let elementA = stack.popLast() else { return }
+        guard let elementB = stack.popLast() else { return }
     }
     
     mutating func plusPressed() {
@@ -75,11 +96,15 @@ struct RPNCalculator: Calculator {
     }
     
     mutating func minusPressed() {
-        
+        guard let elementA = stack.popLast() else { return }
+        guard let elementB = stack.popLast() else { return }
+        stack.append(Item(value: elementA.value - elementB.value))
     }
     
     mutating func divisionPressed() {
-        
+        guard let elementA = stack.popLast() else { return }
+        guard let elementB = stack.popLast() else { return }
+        stack.append(Item(value: elementA.value / elementB.value))
     }
     
     mutating func multiplicationPressed() {
@@ -90,5 +115,76 @@ struct RPNCalculator: Calculator {
     
     mutating func swapPressed() {
         stack.swapAt(0, 1)
+    }
+    
+    mutating func yxPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: sqrt(element.value)))
+    }
+    
+    mutating func sqrtPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: sqrt(element.value)))
+    }
+    
+    mutating func inversePressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: 1/(element.value)))
+    }
+    
+    mutating func xFactorialPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: Double(Int(element.value).fact())))
+    }
+    
+    mutating func x2Pressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: pow(element.value, 2)))
+    }
+    
+    mutating func x3Pressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: pow(element.value, 3)))
+    }
+    
+    mutating func sqrt3Pressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: pow(element.value, 1/3)))
+    }
+    
+    mutating func sqrtyxPressed() {
+        guard let elementA = stack.popLast() else { return }
+        guard let elementB = stack.popLast() else { return }
+  
+    }
+
+    mutating func sinPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: sin(element.value)))
+    }
+    
+    mutating func sinhPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: sinh(element.value)))
+    }
+    
+    mutating func cosPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: cos(element.value)))
+    }
+    
+    mutating func coshPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: cosh(element.value)))
+    }
+    
+    mutating func tanPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: tan(element.value)))
+    }
+    
+    mutating func tanhPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: tanh(element.value)))
     }
 }

@@ -53,6 +53,7 @@ struct Keyboard: View {
                 } label: {
                     Text("%")
                 }
+                .disabled(true)
                 Button {
                     calculator.divisionPressed()
                 } label: {

@@ -48,34 +48,34 @@ struct NumericProgrammerKeyboard: View {
             }
             HStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.digitPressed(7)
                 } label: {
                     Text("7")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.digitPressed(8)
                 } label: {
                     Text("8")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.digitPressed(9)
                 } label: {
                     Text("9")
                 }
             }
             HStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.digitPressed(4)
                 } label: {
                     Text("4")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.digitPressed(5)
                 } label: {
                     Text("5")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.digitPressed(6)
                 } label: {
                     Text("6")
                 }
@@ -124,6 +124,5 @@ struct NumericProgrammerKeyboard: View {
 struct NumericProgrammerKeyboard_Previews: PreviewProvider {
     static var previews: some View {
         NumericProgrammerKeyboard(calculator: Binding.constant(RPNCalculator()))
-            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

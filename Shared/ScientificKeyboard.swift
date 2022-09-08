@@ -27,13 +27,13 @@ struct ScientificKeyboard: View {
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.inversePressed()
                 } label: {
                     Text("1/x")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.xFactorialPressed()
                 } label: {
                     Text("x!")
                 }
@@ -54,25 +54,25 @@ struct ScientificKeyboard: View {
                 .disabled(true)
 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.x2Pressed()
                 } label: {
                     Text("x^2")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.sqrtPressed()
                 } label: {
                     Text("sqrt(x)")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.sinPressed()
                 } label: {
                     Text("sin")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.sinhPressed()
                 } label: {
                     Text("sinh")
                 }
@@ -86,25 +86,25 @@ struct ScientificKeyboard: View {
                 }
 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.x3Pressed()
                 } label: {
                     Text("x^3")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.sqrt3Pressed()
                 } label: {
                     Text("sqrt(x, 3)")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.cosPressed()
                 } label: {
                     Text("cos")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.coshPressed()
                 } label: {
                     Text("cosh")
                 }
@@ -118,25 +118,25 @@ struct ScientificKeyboard: View {
                 }
 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.yxPressed()
                 } label: {
                     Text("y^x")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.sqrtyxPressed()
                 } label: {
                     Text("sqrt(y, x)")
                 }
-                
+                .disabled(true)
                 Button {
-                    calculator.buttonPressed()
+                    calculator.tanPressed()
                 } label: {
                     Text("tan")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.tanhPressed()
                 } label: {
                     Text("tanh")
                 }
