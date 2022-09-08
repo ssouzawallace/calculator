@@ -120,8 +120,9 @@ struct RPNCalculator: Calculator {
     }
     
     mutating func yxPressed() {
-        guard let element = stack.popLast() else { return }
-        stack.append(Item(value: sqrt(element.value)))
+        guard let elementA = stack.popLast() else { return }
+        guard let elementB = stack.popLast() else { return }
+        stack.append(Item(value: pow(elementA.value, elementB.value)))
     }
     
     mutating func sqrtPressed() {
@@ -157,7 +158,7 @@ struct RPNCalculator: Calculator {
     mutating func sqrtyxPressed() {
         guard let elementA = stack.popLast() else { return }
         guard let elementB = stack.popLast() else { return }
-  
+        stack.append(Item(value: pow(elementA.value, 1/elementB.value)))
     }
 
     mutating func sinPressed() {
