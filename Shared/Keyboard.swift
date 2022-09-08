@@ -14,22 +14,22 @@ struct Keyboard: View {
         VStack {
             HStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.swapPressed()
                 } label: {
                     Text("x↔y")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.rowDownPressed()
                 } label: {
                     Text("R↓")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.rowUpPressed()
                 } label: {
                     Text("R↑")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.deletePressed()
                 } label: {
                     Image(systemName: "delete.backward")
                         .accessibilityHint("Delete the current row.")
@@ -49,7 +49,7 @@ struct Keyboard: View {
                     Text("±")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.moduloPressed()
                 } label: {
                     Text("%")
                 }
@@ -122,6 +122,7 @@ struct Keyboard: View {
                         } label: {
                             Text("0")
                         }
+                        
                         Button {
                             calculator.commaPressed()
                         } label: {
@@ -153,6 +154,7 @@ struct Keyboard: View {
                 }
             }
         }
+        .fixedSize(horizontal: true, vertical: true)
         .buttonBorderShape(.capsule)
         .buttonStyle(.bordered)
     }

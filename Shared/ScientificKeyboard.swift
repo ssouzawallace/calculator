@@ -18,6 +18,7 @@ struct ScientificKeyboard: View {
                 } label: {
                     Text("(")
                 }
+                .disabled(true)
 
                 Button {
                     calculator.buttonPressed()
@@ -50,6 +51,7 @@ struct ScientificKeyboard: View {
                 } label: {
                     Text(")")
                 }
+                .disabled(true)
 
                 Button {
                     calculator.buttonPressed()
@@ -204,6 +206,7 @@ struct ScientificKeyboard: View {
                 }
             }
         }
+        .fixedSize(horizontal: true, vertical: true)
         .buttonBorderShape(.capsule)
         .buttonStyle(.bordered)
     }
@@ -212,5 +215,6 @@ struct ScientificKeyboard: View {
 struct ScientificKeyboard_Previews: PreviewProvider {
     static var previews: some View {
         ScientificKeyboard(calculator: Binding.constant(RPNCalculator()))
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

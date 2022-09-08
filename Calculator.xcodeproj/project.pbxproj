@@ -15,6 +15,8 @@
 		17BDA615288753BE0068E353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BDA602288753BE0068E353 /* Assets.xcassets */; };
 		17C8120D28C98123008E445B /* ScientificKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8120C28C98123008E445B /* ScientificKeyboard.swift */; };
 		17C8120E28C98123008E445B /* ScientificKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8120C28C98123008E445B /* ScientificKeyboard.swift */; };
+		17C8121028C98D07008E445B /* ProgrammerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8120F28C98D07008E445B /* ProgrammerKeyboard.swift */; };
+		17C8121128C98D07008E445B /* ProgrammerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C8120F28C98D07008E445B /* ProgrammerKeyboard.swift */; };
 		17E4021228C2CC10000C7B13 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4021128C2CC10000C7B13 /* CalculatorTests.swift */; };
 		17E4021928C2CC33000C7B13 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4021828C2CC33000C7B13 /* Display.swift */; };
 		17E4021A28C2CC33000C7B13 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4021828C2CC33000C7B13 /* Display.swift */; };
@@ -42,6 +44,7 @@
 		17BDA60D288753BE0068E353 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BDA60F288753BE0068E353 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		17C8120C28C98123008E445B /* ScientificKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificKeyboard.swift; sourceTree = "<group>"; };
+		17C8120F28C98D07008E445B /* ProgrammerKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammerKeyboard.swift; sourceTree = "<group>"; };
 		17E4020F28C2CC0F000C7B13 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E4021128C2CC10000C7B13 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		17E4021828C2CC33000C7B13 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 				17BDA601288753B90068E353 /* ContentView.swift */,
 				17E4021828C2CC33000C7B13 /* Display.swift */,
 				17E4021B28C2CC41000C7B13 /* Keyboard.swift */,
+				17C8120F28C98D07008E445B /* ProgrammerKeyboard.swift */,
 				17C8120C28C98123008E445B /* ScientificKeyboard.swift */,
 				17E4021E28C2CD03000C7B13 /* Calculator.swift */,
 				17BDA602288753BE0068E353 /* Assets.xcassets */,
@@ -254,6 +258,7 @@
 			files = (
 				17BDA612288753BE0068E353 /* ContentView.swift in Sources */,
 				17E4021928C2CC33000C7B13 /* Display.swift in Sources */,
+				17C8121028C98D07008E445B /* ProgrammerKeyboard.swift in Sources */,
 				17E4021C28C2CC41000C7B13 /* Keyboard.swift in Sources */,
 				17C8120D28C98123008E445B /* ScientificKeyboard.swift in Sources */,
 				17E4021F28C2CD03000C7B13 /* Calculator.swift in Sources */,
@@ -267,6 +272,7 @@
 			files = (
 				17BDA613288753BE0068E353 /* ContentView.swift in Sources */,
 				17E4021A28C2CC33000C7B13 /* Display.swift in Sources */,
+				17C8121128C98D07008E445B /* ProgrammerKeyboard.swift in Sources */,
 				17E4021D28C2CC41000C7B13 /* Keyboard.swift in Sources */,
 				17C8120E28C98123008E445B /* ScientificKeyboard.swift in Sources */,
 				17E4022028C2CD03000C7B13 /* Calculator.swift in Sources */,

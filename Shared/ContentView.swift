@@ -8,29 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isScientific = true
+    @State private var isProgrammer = true
+    @State private var isScientific = false
     @State private var calculator = RPNCalculator()
     
     var body: some View {
-        VStack {
-            Toggle("Scientific", isOn: $isScientific)
-            Spacer()
-            Display(calculator: $calculator)
-                .scaledToFit()
-            HStack {
-                if isScientific {
-                    ScientificKeyboard(calculator: $calculator)
+        NavigationView {
+            VStack(alignment: .center, spacing: 0) {
+                Spacer()
+                Toggle("Scientific", isOn: $isScientific)
+                Toggle("Programmer", isOn: $isProgrammer)
+                Spacer()
+                Display(calculator: $calculator)
+                    .scaledToFit()
+                HStack {
+                    if isProgrammer && UIDevice.current.orientation.isLandscape {
+                        ProgrammerKeyboard(calculator: $calculator)
+                    }
+                    if isScientific && UIDevice.current.orientation.isLandscape {
+                        ScientificKeyboard(calculator: $calculator)
+                    }
+                    Keyboard(calculator: $calculator)
+                        .scaledToFill()
                 }
-                Keyboard(calculator: $calculator)
-                    .scaledToFill()
             }
+            .background(.thinMaterial)
         }
-        .background(.thinMaterial)
+        .navigationViewStyle(.stack)
+        .navigationTitle("Senolop")
+        .toolbar {
+            EditButton()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

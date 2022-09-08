@@ -41,6 +41,22 @@ struct RPNCalculator: Calculator {
         stack.append(newElement)
     }
     
+    mutating func deletePressed() {
+        stack.removeLast()
+    }
+    
+    mutating func rowUpPressed() {
+        
+    }
+    
+    mutating func rowDownPressed() {
+        
+    }
+
+    mutating func moduloPressed() {
+        
+    }
+    
     mutating func plusPressed() {
         guard let elementA = stack.popLast() else { return }
         guard let elementB = stack.popLast() else { return }
