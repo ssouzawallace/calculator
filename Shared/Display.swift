@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Display: View {
-    @State private var isProgrammer = true
+    @Binding var mode: RPNCalculator.Mode
+    @State private var baseMode: RPNCalculator.BaseMode = .ten
     @State private var multiSelection = Set<UUID>()
     @Binding var calculator: RPNCalculator
     
@@ -22,8 +23,8 @@ struct Display: View {
                     }
                 }
             }
-            if isProgrammer {
-                Picker("Mode", selection: $isProgrammer) {
+            if mode == .programmer {
+                Picker("Mode", selection: $baseMode) {
                     Text("8")
                     Text("10")
                     Text("12")
@@ -36,7 +37,8 @@ struct Display: View {
 
 struct Display_Previews: PreviewProvider {
     static var previews: some View {
-        Display(calculator: Binding.constant(RPNCalculator()))
+        Display(mode: Binding.constant(.basic),
+                calculator: Binding.constant(RPNCalculator()))
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

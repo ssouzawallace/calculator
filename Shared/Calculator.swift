@@ -21,6 +21,17 @@ struct RPNCalculator: Calculator {
         let id = UUID()
     }
     
+    enum Mode: String, CaseIterable {
+        case basic = "Basic"
+        case scientific = "Scientific"
+        case programmer = "Programmer"
+    }
+    
+    enum BaseMode: Int {
+        case eight = 8
+        case ten = 10
+        case sixteen = 16
+    }
     var stack: [Item] = [Item(value: 0)]
     
     mutating func digitPressed(_ digit: Int) {

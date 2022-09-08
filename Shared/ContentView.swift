@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isProgrammer = true
-    @State private var isScientific = false
+    @State private var mode: RPNCalculator.Mode = .basic
     @State private var calculator = RPNCalculator()
     
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
-                Spacer()
-                Toggle("Scientific", isOn: $isScientific)
-                Toggle("Programmer", isOn: $isProgrammer)
-                Spacer()
-                Display(calculator: $calculator)
+                Picker("Mode", selection: $mode) {
+                    Text(RPNCalculator.Mode.basic.rawValue).tag(RPNCalculator.Mode.basic)
+                    Text(RPNCalculator.Mode.scientific.rawValue).tag(RPNCalculator.Mode.scientific)
+                    Text(RPNCalculator.Mode.programmer.rawValue).tag(RPNCalculator.Mode.programmer)
+                }
+                Display(mode: $mode, calculator: $calculator)
                 HStack {
-                    if isProgrammer && UIDevice.current.orientation.isLandscape {
+                    if mode == .programmer { //&& UIDevice.current.orientation.isLandscape {
                         ProgrammerKeyboard(calculator: $calculator)
                     }
-                    if isScientific && UIDevice.current.orientation.isLandscape {
+                    if mode == .scientific { //&& UIDevice.current.orientation.isLandscape {
                         ScientificKeyboard(calculator: $calculator)
                     }
-                    if !isProgrammer {
+                    if mode != .programmer {
                         Keyboard(calculator: $calculator)
                     }
                 }
