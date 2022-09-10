@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Display: View {
-    @Binding var mode: RPNCalculator.Mode
+    @Binding var mode: RPNCalculator.VisualizationMode
     @State private var baseMode: RPNCalculator.BaseMode = .ten
     @State private var multiSelection = Set<UUID>()
     @Binding var calculator: RPNCalculator

@@ -14,7 +14,6 @@ struct ScientificKeyboard: View {
         HStack {
             VStack {
                 Button {
-                    calculator.buttonPressed()
                 } label: {
                     Text("(")
                 }
@@ -38,16 +37,24 @@ struct ScientificKeyboard: View {
                     Text("x!")
                 }
                 
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("Rad")
+                
+                if calculator.mode == .deg {
+                    Button {
+                        calculator.radPressed()
+                    } label: {
+                        Text("Rad")
+                    }
+                } else {
+                    Button {
+                        calculator.degPressed()
+                    } label: {
+                        Text("Deg")
+                    }
                 }
             }
             
             VStack {
                 Button {
-                    calculator.buttonPressed()
                 } label: {
                     Text(")")
                 }
@@ -150,25 +157,25 @@ struct ScientificKeyboard: View {
                 }
 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.ePoweredByXPressed()
                 } label: {
                     Text("e^x")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.lognPressed()
                 } label: {
                     Text("ln")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.ePressed()
                 } label: {
                     Text("e")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.piPressed()
                 } label: {
                     Text("π")
                 }
@@ -182,13 +189,13 @@ struct ScientificKeyboard: View {
                 }
 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.tenPoweredByXPressed()
                 } label: {
                     Text("10^x")
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.log10Pressed()
                 } label: {
                     Text("log10")
                 }
@@ -200,7 +207,7 @@ struct ScientificKeyboard: View {
                 }
                 
                 Button {
-                    calculator.buttonPressed()
+                    calculator.randPressed()
                 } label: {
                     Text("Rand")
                 }

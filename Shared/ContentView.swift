@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var mode: RPNCalculator.Mode = .basic
+    @State private var mode: RPNCalculator.VisualizationMode = .basic
     @State private var calculator = RPNCalculator()
     
     func copy() {
@@ -42,11 +42,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            VStack {
+                Text("Senolop")
+                Display(mode: $mode, calculator: $calculator)
+            }
             VStack(alignment: .center, spacing: 0) {
                 Picker("Mode", selection: $mode) {
-                    Text(RPNCalculator.Mode.basic.rawValue).tag(RPNCalculator.Mode.basic)
-                    Text(RPNCalculator.Mode.scientific.rawValue).tag(RPNCalculator.Mode.scientific)
-                    Text(RPNCalculator.Mode.programmer.rawValue).tag(RPNCalculator.Mode.programmer)
+                    Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
+                    Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
+                    Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
                 }
                 Display(mode: $mode, calculator: $calculator)
                 HStack {
@@ -84,6 +88,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }

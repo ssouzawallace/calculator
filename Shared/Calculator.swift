@@ -29,10 +29,15 @@ struct RPNCalculator: Calculator {
         let id = UUID()
     }
     
-    enum Mode: String, CaseIterable {
+    enum VisualizationMode: String, CaseIterable {
         case basic = "Basic"
         case scientific = "Scientific"
         case programmer = "Programmer"
+    }
+    
+    enum Mode: String {
+        case rad = "Rad"
+        case deg = "Deg"
     }
     
     enum BaseMode: Int {
@@ -40,6 +45,8 @@ struct RPNCalculator: Calculator {
         case ten = 10
         case sixteen = 16
     }
+    var mode: Mode = .deg
+    var cleanState = true
     var stack: [Item] = [Item(value: 0)]
     
     mutating func digitPressed(_ digit: Int) {
@@ -47,6 +54,7 @@ struct RPNCalculator: Calculator {
             raise(0)
             return
         }
+        cleanState = false
         let value: Double = stack.popLast()?.value ?? 0
         stack.append(Item(value: value*10 + (addsComma ? Double("0"+String(digit))! : Double(digit))))
     }
@@ -65,6 +73,22 @@ struct RPNCalculator: Calculator {
         
     private var containsComma: Bool {
         stack[0].value - Double(Int(stack[0].value)) != 0.0
+    }
+    
+    mutating func acPressed() {
+        cleanState = true
+        stack = [Item(value: 0)]
+    }
+    
+    mutating func cPressed() {
+        cleanState = true
+        stack.removeLast()
+        stack.append(Item(value: 0))
+    }
+    
+    mutating func invertSignalPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: -element.value))
     }
     
     mutating func returnPressed() {
@@ -189,5 +213,45 @@ struct RPNCalculator: Calculator {
     mutating func tanhPressed() {
         guard let element = stack.popLast() else { return }
         stack.append(Item(value: tanh(element.value)))
+    }
+    
+    mutating func randPressed() {
+        stack.append(Item(value: Double(arc4random())))
+    }
+    
+    mutating func radPressed() {
+        mode = .rad
+    }
+    
+    mutating func degPressed() {
+        mode = .deg
+    }
+    
+    mutating func tenPoweredByXPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: pow(element.value, 10)))
+    }
+    
+    mutating func log10Pressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: log10(element.value)))
+    }
+    
+    mutating func ePressed() {
+        stack.append(Item(value: exp(1)))
+    }
+    
+    mutating func piPressed() {
+        stack.append(Item(value: Double.pi))
+    }
+    
+    mutating func lognPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: log(element.value)))
+    }
+    
+    mutating func ePoweredByXPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: log10(element.value)))
     }
 }

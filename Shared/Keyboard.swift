@@ -38,13 +38,22 @@ struct Keyboard: View {
             }
             
             HStack {
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("C")
+                if calculator.cleanState {
+                    Button {
+                        calculator.acPressed()
+                    } label: {
+                        Text("AC")
+                    }
+                } else {
+                    Button {
+                        calculator.cPressed()
+                    } label: {
+                        Text("C")
+                    }
                 }
+                
                 Button {
-                    calculator.buttonPressed()
+                    calculator.invertSignalPressed()
                 } label: {
                     Text("±")
                 }
