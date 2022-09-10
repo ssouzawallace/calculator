@@ -19,10 +19,19 @@ struct ScientificKeyboard: View {
                 }
                 .disabled(true)
 
-                Button {
-                    calculator.buttonPressed()
-                } label: {
-                    Text("2nd")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.lessFunctionsPressed()
+                    } label: {
+                        Text("2nd")
+                    }
+                    .background(.orange)
+                } else {
+                    Button {
+                        calculator.moreFunctionsPressed()
+                    } label: {
+                        Text("2nd")
+                    }
                 }
                 
                 Button {
@@ -72,22 +81,38 @@ struct ScientificKeyboard: View {
                     Text("sqrt(x)")
                 }
                 
-                Button {
-                    calculator.sinPressed()
-                } label: {
-                    Text("sin")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.sinInvPressed()
+                    } label: {
+                        Text("sin⁻¹")
+                    }
+                } else {
+                    Button {
+                        calculator.sinPressed()
+                    } label: {
+                        Text("sin")
+                    }
                 }
                 
-                Button {
-                    calculator.sinhPressed()
-                } label: {
-                    Text("sinh")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.sinhInvPressed()
+                    } label: {
+                        Text("sinh⁻¹")
+                    }
+                } else {
+                    Button {
+                        calculator.sinhPressed()
+                    } label: {
+                        Text("sinh")
+                    }
                 }
             }
             
             VStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.mcPressed()
                 } label: {
                     Text("mc")
                 }
@@ -104,22 +129,38 @@ struct ScientificKeyboard: View {
                     Text("sqrt(x, 3)")
                 }
                 
-                Button {
-                    calculator.cosPressed()
-                } label: {
-                    Text("cos")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.cosInvPressed()
+                    } label: {
+                        Text("cos⁻¹")
+                    }
+                } else {
+                    Button {
+                        calculator.cosPressed()
+                    } label: {
+                        Text("cos")
+                    }
                 }
                 
-                Button {
-                    calculator.coshPressed()
-                } label: {
-                    Text("cosh")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.coshInvPressed()
+                    } label: {
+                        Text("cosh⁻¹")
+                    }
+                } else {
+                    Button {
+                        calculator.coshPressed()
+                    } label: {
+                        Text("cosh")
+                    }
                 }
             }
             
             VStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.mPlusPressed()
                 } label: {
                     Text("m+")
                 }
@@ -136,36 +177,70 @@ struct ScientificKeyboard: View {
                     Text("sqrt(y, x)")
                 }
                 .disabled(true)
-                Button {
-                    calculator.tanPressed()
-                } label: {
-                    Text("tan")
+                
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.tanInvPressed()
+                    } label: {
+                        Text("tan⁻¹")
+                    }
+                } else {
+                    Button {
+                        calculator.tanPressed()
+                    } label: {
+                        Text("tan")
+                    }
                 }
                 
-                Button {
-                    calculator.tanhPressed()
-                } label: {
-                    Text("tanh")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.tanhInvPressed()
+                    } label: {
+                        Text("tanh⁻¹")
+                    }
+                } else {
+                    Button {
+                        calculator.tanhPressed()
+                    } label: {
+                        Text("tanh")
+                    }
                 }
             }
             
             VStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.mMinusPressed()
                 } label: {
                     Text("m-")
                 }
 
-                Button {
-                    calculator.ePoweredByXPressed()
-                } label: {
-                    Text("e^x")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.xPoweredByYPressed()
+                    } label: {
+                        Text("x^y")
+                    }
+                } else {
+                    Button {
+                        calculator.ePoweredByXPressed()
+                    } label: {
+                        Text("e^x")
+                    }
                 }
                 
-                Button {
-                    calculator.lognPressed()
-                } label: {
-                    Text("ln")
+                
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.lnyPressed()
+                    } label: {
+                        Text("lny")
+                    }
+                } else {
+                    Button {
+                        calculator.lognPressed()
+                    } label: {
+                        Text("ln")
+                    }
                 }
                 
                 Button {
@@ -183,25 +258,41 @@ struct ScientificKeyboard: View {
             
             VStack {
                 Button {
-                    calculator.buttonPressed()
+                    calculator.mrPressed()
                 } label: {
                     Text("mr")
                 }
 
-                Button {
-                    calculator.tenPoweredByXPressed()
-                } label: {
-                    Text("10^x")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.twoPoweredByXPressed()
+                    } label: {
+                        Text("2^x")
+                    }
+                } else {
+                    Button {
+                        calculator.tenPoweredByXPressed()
+                    } label: {
+                        Text("10^x")
+                    }
                 }
                 
-                Button {
-                    calculator.log10Pressed()
-                } label: {
-                    Text("log10")
+                if calculator.moreFunctions {
+                    Button {
+                        calculator.log2Pressed()
+                    } label: {
+                        Text("log2")
+                    }
+                } else {
+                    Button {
+                        calculator.log10Pressed()
+                    } label: {
+                        Text("log10")
+                    }
                 }
-                
+                                
                 Button {
-                    calculator.buttonPressed()
+                    calculator.eePressed()
                 } label: {
                     Text("EE")
                 }

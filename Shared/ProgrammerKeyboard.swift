@@ -16,56 +16,56 @@ struct ProgrammerKeyboard: View {
                 HStack {
                     VStack {
                         Button {
-                            calculator.buttonPressed()
+                            calculator.andPressed()
                         } label: {
                             Text("AND")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.norPressed()
                         } label: {
                             Text("NOR")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.leftShiftPressed()
                         } label: {
                             Text("<<")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.xLeftShiftYPressed()
                         } label: {
                             Text("X<<Y")
                         }
                     }
                     VStack {
                         Button {
-                            calculator.buttonPressed()
+                            calculator.orPressed()
                         } label: {
                             Text("OR")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.xorPressed()
                         } label: {
                             Text("XOR")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.rightShiftPressed()
                         } label: {
                             Text(">>")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.xRightShiftYPressed()
                         } label: {
                             Text("X>>Y")
                         }
                     }
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.invertBytePressed()
                 } label: {
                     Text("inverter byte")
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.invertWordPressed()
                 } label: {
                     Text("inverter palavra")
                 }
@@ -75,7 +75,7 @@ struct ProgrammerKeyboard: View {
                 HStack {
                     VStack {
                         Button {
-                            calculator.buttonPressed()
+                            calculator.acPressed()
                         } label: {
                             Text("AC")
                         }
@@ -90,19 +90,19 @@ struct ProgrammerKeyboard: View {
                             Text("2´s")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.divisionPressed()
                         } label: {
                             Text("÷")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.multiplicationPressed()
                         } label: {
                             Text("×")
                         }
                     }
                     VStack {
                         Button {
-                            calculator.buttonPressed()
+                            calculator.cPressed()
                         } label: {
                             Text("C")
                         }
@@ -117,19 +117,19 @@ struct ProgrammerKeyboard: View {
                             Text("1´s")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.minusPressed()
                         } label: {
                             Text("−")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.plusPressed()
                         } label: {
                             Text("+")
                         }
                     }
                 }
                 Button {
-                    calculator.buttonPressed()
+                    calculator.returnPressed()
                 } label: {
                     Text("⏎")
                 }
