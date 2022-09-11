@@ -48,7 +48,7 @@
 		17BDA600288753B90068E353 /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		17BDA601288753B90068E353 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17BDA602288753BE0068E353 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		17BDA607288753BE0068E353 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BDA607288753BE0068E353 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BDA60D288753BE0068E353 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BDA60F288753BE0068E353 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		17C8120C28C98123008E445B /* ScientificKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientificKeyboard.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		17BDA608288753BE0068E353 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17BDA607288753BE0068E353 /* Calculator.app */,
+				17BDA607288753BE0068E353 /* Senolop.app */,
 				17BDA60D288753BE0068E353 /* Calculator.app */,
 				17E4020F28C2CC0F000C7B13 /* CalculatorTests.xctest */,
 			);
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		17BDA606288753BE0068E353 /* Calculator (iOS) */ = {
+		17BDA606288753BE0068E353 /* Senolop (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17BDA618288753BE0068E353 /* Build configuration list for PBXNativeTarget "Calculator (iOS)" */;
+			buildConfigurationList = 17BDA618288753BE0068E353 /* Build configuration list for PBXNativeTarget "Senolop (iOS)" */;
 			buildPhases = (
 				17BDA603288753BE0068E353 /* Sources */,
 				17BDA604288753BE0068E353 /* Frameworks */,
@@ -159,9 +159,9 @@
 			);
 			dependencies = (
 			);
-			name = "Calculator (iOS)";
+			name = "Senolop (iOS)";
 			productName = "Calculator (iOS)";
-			productReference = 17BDA607288753BE0068E353 /* Calculator.app */;
+			productReference = 17BDA607288753BE0068E353 /* Senolop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		17BDA60C288753BE0068E353 /* Calculator (macOS) */ = {
@@ -234,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17BDA606288753BE0068E353 /* Calculator (iOS) */,
+				17BDA606288753BE0068E353 /* Senolop (iOS) */,
 				17BDA60C288753BE0068E353 /* Calculator (macOS) */,
 				17E4020E28C2CC0F000C7B13 /* CalculatorTests */,
 			);
@@ -317,7 +317,7 @@
 /* Begin PBXTargetDependency section */
 		17E4021428C2CC10000C7B13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17BDA606288753BE0068E353 /* Calculator (iOS) */;
+			target = 17BDA606288753BE0068E353 /* Senolop (iOS) */;
 			targetProxy = 17E4021328C2CC10000C7B13 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -453,8 +453,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Calculator;
-				PRODUCT_NAME = Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
+				PRODUCT_NAME = Senolop;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -483,8 +483,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Calculator;
-				PRODUCT_NAME = Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
+				PRODUCT_NAME = Senolop;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -602,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17BDA618288753BE0068E353 /* Build configuration list for PBXNativeTarget "Calculator (iOS)" */ = {
+		17BDA618288753BE0068E353 /* Build configuration list for PBXNativeTarget "Senolop (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17BDA619288753BE0068E353 /* Debug */,

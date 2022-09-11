@@ -4,16 +4,18 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Calculator (iOS).xcscheme_^#shared#^_</key>
+		<key>Calculator (macOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Calculator (macOS).xcscheme_^#shared#^_</key>
+		<key>Senolop (iOS).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>

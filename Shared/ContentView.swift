@@ -65,8 +65,9 @@ struct ContentView: View {
                     }
                 }
             }
-            .background(.thinMaterial)
+            .background(Color("BackgroundColor"))
         }
+        .navigationViewStyle(.columns)
         .navigationTitle("Senolop")
         .toolbar {
             Menu {
