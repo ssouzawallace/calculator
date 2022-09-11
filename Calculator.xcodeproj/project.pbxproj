@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170EE99328EE0D490041D44F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EE99228EE0D490041D44F /* AppDelegate.swift */; };
+		170EE99528EE0D490041D44F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EE99428EE0D490041D44F /* ViewController.swift */; };
+		170EE99828EE0D490041D44F /* Senolop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 170EE99628EE0D490041D44F /* Senolop.xcdatamodeld */; };
+		170EE99A28EE0D5A0041D44F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170EE99928EE0D5A0041D44F /* Assets.xcassets */; };
+		170EE99D28EE0D5B0041D44F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170EE99B28EE0D5B0041D44F /* Main.storyboard */; };
+		170EE9A828EE0D5E0041D44F /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EE9A728EE0D5E0041D44F /* SenolopTests.swift */; };
+		170EE9B228EE0D5F0041D44F /* SenolopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EE9B128EE0D5F0041D44F /* SenolopUITests.swift */; };
+		170EE9B428EE0D5F0041D44F /* SenolopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EE9B328EE0D5F0041D44F /* SenolopUITestsLaunchTests.swift */; };
 		17BDA610288753BE0068E353 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA600288753B90068E353 /* CalculatorApp.swift */; };
 		17BDA611288753BE0068E353 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA600288753B90068E353 /* CalculatorApp.swift */; };
 		17BDA612288753BE0068E353 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDA601288753B90068E353 /* ContentView.swift */; };
@@ -35,6 +43,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		170EE9A428EE0D5D0041D44F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17BDA5FB288753B90068E353 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 170EE98F28EE0D490041D44F;
+			remoteInfo = Senolop;
+		};
+		170EE9AE28EE0D5E0041D44F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17BDA5FB288753B90068E353 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 170EE98F28EE0D490041D44F;
+			remoteInfo = Senolop;
+		};
 		17E4021328C2CC10000C7B13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17BDA5FB288753B90068E353 /* Project object */;
@@ -45,6 +67,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170EE99028EE0D490041D44F /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		170EE99228EE0D490041D44F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		170EE99428EE0D490041D44F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		170EE99728EE0D490041D44F /* Senolop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Senolop.xcdatamodel; sourceTree = "<group>"; };
+		170EE99928EE0D5A0041D44F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		170EE99C28EE0D5B0041D44F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		170EE99E28EE0D5B0041D44F /* Senolop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Senolop.entitlements; sourceTree = "<group>"; };
+		170EE9A328EE0D5D0041D44F /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170EE9A728EE0D5E0041D44F /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
+		170EE9AD28EE0D5E0041D44F /* SenolopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170EE9B128EE0D5F0041D44F /* SenolopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopUITests.swift; sourceTree = "<group>"; };
+		170EE9B328EE0D5F0041D44F /* SenolopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		17BDA600288753B90068E353 /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		17BDA601288753B90068E353 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17BDA602288753BE0068E353 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +99,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		170EE98D28EE0D490041D44F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170EE9A028EE0D5D0041D44F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170EE9AA28EE0D5E0041D44F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17BDA604288753BE0068E353 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,12 +144,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170EE99128EE0D490041D44F /* Senolop */ = {
+			isa = PBXGroup;
+			children = (
+				170EE99228EE0D490041D44F /* AppDelegate.swift */,
+				170EE99428EE0D490041D44F /* ViewController.swift */,
+				170EE99928EE0D5A0041D44F /* Assets.xcassets */,
+				170EE99B28EE0D5B0041D44F /* Main.storyboard */,
+				170EE99E28EE0D5B0041D44F /* Senolop.entitlements */,
+				170EE99628EE0D490041D44F /* Senolop.xcdatamodeld */,
+			);
+			path = Senolop;
+			sourceTree = "<group>";
+		};
+		170EE9A628EE0D5E0041D44F /* SenolopTests */ = {
+			isa = PBXGroup;
+			children = (
+				170EE9A728EE0D5E0041D44F /* SenolopTests.swift */,
+			);
+			path = SenolopTests;
+			sourceTree = "<group>";
+		};
+		170EE9B028EE0D5F0041D44F /* SenolopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				170EE9B128EE0D5F0041D44F /* SenolopUITests.swift */,
+				170EE9B328EE0D5F0041D44F /* SenolopUITestsLaunchTests.swift */,
+			);
+			path = SenolopUITests;
+			sourceTree = "<group>";
+		};
 		17BDA5FA288753B90068E353 = {
 			isa = PBXGroup;
 			children = (
 				17BDA5FF288753B90068E353 /* Shared */,
 				17BDA60E288753BE0068E353 /* macOS */,
 				17E4021028C2CC10000C7B13 /* CalculatorTests */,
+				170EE99128EE0D490041D44F /* Senolop */,
+				170EE9A628EE0D5E0041D44F /* SenolopTests */,
+				170EE9B028EE0D5F0041D44F /* SenolopUITests */,
 				17BDA608288753BE0068E353 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +212,9 @@
 				17BDA607288753BE0068E353 /* Senolop.app */,
 				17BDA60D288753BE0068E353 /* Calculator.app */,
 				17E4020F28C2CC0F000C7B13 /* CalculatorTests.xctest */,
+				170EE99028EE0D490041D44F /* Senolop.app */,
+				170EE9A328EE0D5D0041D44F /* SenolopTests.xctest */,
+				170EE9AD28EE0D5E0041D44F /* SenolopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +238,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		170EE98F28EE0D490041D44F /* Senolop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170EE9BB28EE0D5F0041D44F /* Build configuration list for PBXNativeTarget "Senolop" */;
+			buildPhases = (
+				170EE98C28EE0D490041D44F /* Sources */,
+				170EE98D28EE0D490041D44F /* Frameworks */,
+				170EE98E28EE0D490041D44F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Senolop;
+			productName = Senolop;
+			productReference = 170EE99028EE0D490041D44F /* Senolop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		170EE9A228EE0D5D0041D44F /* SenolopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170EE9BC28EE0D5F0041D44F /* Build configuration list for PBXNativeTarget "SenolopTests" */;
+			buildPhases = (
+				170EE99F28EE0D5D0041D44F /* Sources */,
+				170EE9A028EE0D5D0041D44F /* Frameworks */,
+				170EE9A128EE0D5D0041D44F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				170EE9A528EE0D5D0041D44F /* PBXTargetDependency */,
+			);
+			name = SenolopTests;
+			productName = SenolopTests;
+			productReference = 170EE9A328EE0D5D0041D44F /* SenolopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		170EE9AC28EE0D5E0041D44F /* SenolopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170EE9BD28EE0D5F0041D44F /* Build configuration list for PBXNativeTarget "SenolopUITests" */;
+			buildPhases = (
+				170EE9A928EE0D5E0041D44F /* Sources */,
+				170EE9AA28EE0D5E0041D44F /* Frameworks */,
+				170EE9AB28EE0D5E0041D44F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				170EE9AF28EE0D5E0041D44F /* PBXTargetDependency */,
+			);
+			name = SenolopUITests;
+			productName = SenolopUITests;
+			productReference = 170EE9AD28EE0D5E0041D44F /* SenolopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		17BDA606288753BE0068E353 /* Senolop (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17BDA618288753BE0068E353 /* Build configuration list for PBXNativeTarget "Senolop (iOS)" */;
@@ -206,9 +350,20 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					170EE98F28EE0D490041D44F = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					170EE9A228EE0D5D0041D44F = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 170EE98F28EE0D490041D44F;
+					};
+					170EE9AC28EE0D5E0041D44F = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 170EE98F28EE0D490041D44F;
+					};
 					17BDA606288753BE0068E353 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -237,11 +392,37 @@
 				17BDA606288753BE0068E353 /* Senolop (iOS) */,
 				17BDA60C288753BE0068E353 /* Calculator (macOS) */,
 				17E4020E28C2CC0F000C7B13 /* CalculatorTests */,
+				170EE98F28EE0D490041D44F /* Senolop */,
+				170EE9A228EE0D5D0041D44F /* SenolopTests */,
+				170EE9AC28EE0D5E0041D44F /* SenolopUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		170EE98E28EE0D490041D44F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170EE99A28EE0D5A0041D44F /* Assets.xcassets in Resources */,
+				170EE99D28EE0D5B0041D44F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170EE9A128EE0D5D0041D44F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170EE9AB28EE0D5E0041D44F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17BDA605288753BE0068E353 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +449,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		170EE98C28EE0D490041D44F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170EE99528EE0D490041D44F /* ViewController.swift in Sources */,
+				170EE99328EE0D490041D44F /* AppDelegate.swift in Sources */,
+				170EE99828EE0D490041D44F /* Senolop.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170EE99F28EE0D5D0041D44F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170EE9A828EE0D5E0041D44F /* SenolopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170EE9A928EE0D5E0041D44F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170EE9B228EE0D5F0041D44F /* SenolopUITests.swift in Sources */,
+				170EE9B428EE0D5F0041D44F /* SenolopUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17BDA603288753BE0068E353 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +523,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		170EE9A528EE0D5D0041D44F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 170EE98F28EE0D490041D44F /* Senolop */;
+			targetProxy = 170EE9A428EE0D5D0041D44F /* PBXContainerItemProxy */;
+		};
+		170EE9AF28EE0D5E0041D44F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 170EE98F28EE0D490041D44F /* Senolop */;
+			targetProxy = 170EE9AE28EE0D5E0041D44F /* PBXContainerItemProxy */;
+		};
 		17E4021428C2CC10000C7B13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 17BDA606288753BE0068E353 /* Senolop (iOS) */;
@@ -322,7 +540,170 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		170EE99B28EE0D5B0041D44F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170EE99C28EE0D5B0041D44F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		170EE9B528EE0D5F0041D44F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 55XL2R5538;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		170EE9B628EE0D5F0041D44F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 55XL2R5538;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		170EE9B728EE0D5F0041D44F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 55XL2R5538;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
+			};
+			name = Debug;
+		};
+		170EE9B828EE0D5F0041D44F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 55XL2R5538;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
+			};
+			name = Release;
+		};
+		170EE9B928EE0D5F0041D44F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 55XL2R5538;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Senolop;
+			};
+			name = Debug;
+		};
+		170EE9BA28EE0D5F0041D44F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 55XL2R5538;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Senolop;
+			};
+			name = Release;
+		};
 		17BDA616288753BE0068E353 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -356,6 +737,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -414,6 +796,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -499,9 +882,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -527,9 +912,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -593,6 +980,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		170EE9BB28EE0D5F0041D44F /* Build configuration list for PBXNativeTarget "Senolop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170EE9B528EE0D5F0041D44F /* Debug */,
+				170EE9B628EE0D5F0041D44F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		170EE9BC28EE0D5F0041D44F /* Build configuration list for PBXNativeTarget "SenolopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170EE9B728EE0D5F0041D44F /* Debug */,
+				170EE9B828EE0D5F0041D44F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		170EE9BD28EE0D5F0041D44F /* Build configuration list for PBXNativeTarget "SenolopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170EE9B928EE0D5F0041D44F /* Debug */,
+				170EE9BA28EE0D5F0041D44F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		17BDA5FE288753B90068E353 /* Build configuration list for PBXProject "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -630,6 +1044,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		170EE99628EE0D490041D44F /* Senolop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				170EE99728EE0D490041D44F /* Senolop.xcdatamodel */,
+			);
+			currentVersion = 170EE99728EE0D490041D44F /* Senolop.xcdatamodel */;
+			path = Senolop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 17BDA5FB288753B90068E353 /* Project object */;
 }
