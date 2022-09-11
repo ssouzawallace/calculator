@@ -8,16 +8,26 @@
 import SwiftUI
 
 struct BinariesDisplay: View {
-    var body: some View {
-        VStack {
-            Text(String(repeating: "0000 ", count: 8))
-            Text(String(repeating: "0000 ", count: 8))
+    let value: Int
+    var text: String {
+        guard value != 0 else {
+            return "0"
         }
+        var value = value
+        var result = ""
+        while value > 0 {
+            result = String(value % 2) + result
+            value /= 2
+        }
+        return result
+    }
+    var body: some View {
+        Text(text)
     }
 }
 
 struct BinariesDisplay_Previews: PreviewProvider {
     static var previews: some View {
-        BinariesDisplay()
+        BinariesDisplay(value: 10)
     }
 }
