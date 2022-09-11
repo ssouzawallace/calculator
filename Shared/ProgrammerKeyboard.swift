@@ -80,15 +80,16 @@ struct ProgrammerKeyboard: View {
                             Text("AC")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.rolPressed()
                         } label: {
                             Text("RoL")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            
                         } label: {
                             Text("2´s")
                         }
+                        .disabled(true)
                         Button {
                             calculator.divisionPressed()
                         } label: {
@@ -107,15 +108,16 @@ struct ProgrammerKeyboard: View {
                             Text("C")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            calculator.rorPressed()
                         } label: {
                             Text("RoR")
                         }
                         Button {
-                            calculator.buttonPressed()
+                            
                         } label: {
                             Text("1´s")
                         }
+                        .disabled(true)
                         Button {
                             calculator.minusPressed()
                         } label: {

@@ -20,7 +20,9 @@ protocol Calculator {
 }
 
 extension Calculator {
-    func buttonPressed() { /* do nothing */ }
+    func buttonPressed() {
+        fatalError()
+    }
 }
 
 struct RPNCalculator: Calculator {
@@ -385,6 +387,14 @@ struct RPNCalculator: Calculator {
     }
     
     mutating func invertWordPressed() {
+        
+    }
+    
+    mutating func rolPressed() {
+        
+    }
+    
+    mutating func rorPressed() {
         
     }
 }

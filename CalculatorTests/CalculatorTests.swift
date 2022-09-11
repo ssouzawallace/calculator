@@ -52,9 +52,7 @@ class CalculatorTests: XCTestCase {
     func testButtonPressed() throws {
         let sut = RPNCalculator()
         
-        sut.buttonPressed()
-    
-        
+//        sut.buttonPressed()
     }
     
     func testSqrt3Pressed() throws {
