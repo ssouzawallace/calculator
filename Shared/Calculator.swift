@@ -20,7 +20,9 @@ protocol Calculator {
 }
 
 extension Calculator {
-    func buttonPressed() { /* do nothing */ }
+    func buttonPressed() {
+        fatalError()
+    }
 }
 
 struct RPNCalculator: Calculator {
@@ -46,6 +48,7 @@ struct RPNCalculator: Calculator {
         case sixteen = 16
     }
     var mode: Mode = .deg
+    var moreFunctions = false
     var cleanState = true
     var stack: [Item] = [Item(value: 0)]
     
@@ -57,6 +60,18 @@ struct RPNCalculator: Calculator {
         cleanState = false
         let value: Double = stack.popLast()?.value ?? 0
         stack.append(Item(value: value*10 + (addsComma ? Double("0"+String(digit))! : Double(digit))))
+    }
+    
+    mutating func hexDigitPressed(_ digit: String) {
+        
+    }
+    
+    mutating func ffPressed() {
+        
+    }
+    
+    mutating func zeroZeroPressed() {
+        
     }
     
     mutating func commaPressed() {
@@ -84,6 +99,14 @@ struct RPNCalculator: Calculator {
         cleanState = true
         stack.removeLast()
         stack.append(Item(value: 0))
+    }
+    
+    mutating func moreFunctionsPressed() {
+        moreFunctions = true
+    }
+    
+    mutating func lessFunctionsPressed() {
+        moreFunctions = false
     }
     
     mutating func invertSignalPressed() {
@@ -190,9 +213,19 @@ struct RPNCalculator: Calculator {
         stack.append(Item(value: sin(element.value)))
     }
     
+    mutating func sinInvPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: (element.value)))
+    }
+    
     mutating func sinhPressed() {
         guard let element = stack.popLast() else { return }
         stack.append(Item(value: sinh(element.value)))
+    }
+    
+    mutating func sinhInvPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: asinh(element.value)))
     }
     
     mutating func cosPressed() {
@@ -200,9 +233,19 @@ struct RPNCalculator: Calculator {
         stack.append(Item(value: cos(element.value)))
     }
     
+    mutating func cosInvPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: acos(element.value)))
+    }
+    
     mutating func coshPressed() {
         guard let element = stack.popLast() else { return }
         stack.append(Item(value: cosh(element.value)))
+    }
+    
+    mutating func coshInvPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: acosh(element.value)))
     }
     
     mutating func tanPressed() {
@@ -210,7 +253,17 @@ struct RPNCalculator: Calculator {
         stack.append(Item(value: tan(element.value)))
     }
     
+    mutating func tanInvPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: atanh(element.value)))
+    }
+    
     mutating func tanhPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: tanh(element.value)))
+    }
+    
+    mutating func tanhInvPressed() {
         guard let element = stack.popLast() else { return }
         stack.append(Item(value: tanh(element.value)))
     }
@@ -227,9 +280,25 @@ struct RPNCalculator: Calculator {
         mode = .deg
     }
     
+    mutating func twoPoweredByXPressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: pow(element.value, 2)))
+    }
+    
     mutating func tenPoweredByXPressed() {
         guard let element = stack.popLast() else { return }
         stack.append(Item(value: pow(element.value, 10)))
+    }
+    
+    mutating func xPoweredByYPressed() {
+        guard let elementA = stack.popLast() else { return }
+        guard let elementB = stack.popLast() else { return }
+        stack.append(Item(value: pow(elementA.value, elementB.value)))
+    }
+    
+    mutating func log2Pressed() {
+        guard let element = stack.popLast() else { return }
+        stack.append(Item(value: log2(element.value)))
     }
     
     mutating func log10Pressed() {
@@ -253,5 +322,79 @@ struct RPNCalculator: Calculator {
     mutating func ePoweredByXPressed() {
         guard let element = stack.popLast() else { return }
         stack.append(Item(value: log10(element.value)))
+    }
+    
+    mutating func lnyPressed() {
+        
+    }
+    
+    mutating func mcPressed() {
+        
+    }
+    
+    mutating func mrPressed() {
+        
+    }
+    
+    mutating func mPlusPressed() {
+        
+    }
+    
+    mutating func mMinusPressed() {
+        
+    }
+    
+    mutating func eePressed() {
+        
+    }
+    
+    //
+    
+    mutating func andPressed() {
+        
+    }
+    
+    mutating func orPressed() {
+        
+    }
+    
+    mutating func norPressed() {
+        
+    }
+    
+    mutating func xorPressed() {
+        
+    }
+    
+    mutating func leftShiftPressed() {
+        
+    }
+    
+    mutating func rightShiftPressed() {
+        
+    }
+    
+    mutating func xLeftShiftYPressed() {
+        
+    }
+    
+    mutating func xRightShiftYPressed() {
+        
+    }
+    
+    mutating func invertBytePressed() {
+        
+    }
+    
+    mutating func invertWordPressed() {
+        
+    }
+    
+    mutating func rolPressed() {
+        
+    }
+    
+    mutating func rorPressed() {
+        
     }
 }
