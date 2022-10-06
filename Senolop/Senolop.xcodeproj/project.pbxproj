@@ -67,6 +67,7 @@
 		174AC97928EE85C700E32729 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		174AC97A28EE85C700E32729 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		174AC97B28EE85C700E32729 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		174AC98828EF285000E32729 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
+				174AC98828EF285000E32729 /* README.md */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				174AC95428EE84FA00E32729 /* SenolopTests */,
 				174AC95E28EE84FA00E32729 /* SenolopUITests */,
